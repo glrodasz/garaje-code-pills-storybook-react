@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./Button.css";
 
-const getStyles = (...args) => ["button", args].filter(Boolean).join(" ");
+const getStyles = (...args) => ["button", ...args].filter(Boolean).join(" ");
 
 const Button = ({ children, type = "primary" }) => {
   return <button className={getStyles(type)}>{children}</button>;
